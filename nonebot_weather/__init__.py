@@ -8,15 +8,15 @@ from nonebot.typing import T_State
 from nonebot.plugin import PluginMetadata
 from .config import Config
 
-
 import aiohttp
 
 __plugin_meta__ = PluginMetadata(
-    name="{nonebot-weather}",
-    description="{插件介绍}",
-    usage="{查询天气}",
+    name="{天气查询插件}",
+    description="{查询天气}",
+    usage="{查询天气{天气 城市}}",
     type="{application}",
     homepage="{https://github.com/hriyel/nonebot-weather.git}",
+    config=Config,
     supported_adapters={"~onebot.v11", "~telegram"},
 )
 
