@@ -9,7 +9,7 @@ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
 # you need to change all these
-VERSION = '1.1'
+VERSION = '1.2'
 DESCRIPTION = '一个以nonebot为框架的天气查询插件'
 LONG_DESCRIPTION = ''
 
