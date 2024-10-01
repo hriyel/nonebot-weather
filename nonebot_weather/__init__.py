@@ -5,7 +5,20 @@ from urllib.parse import quote
 from nonebot.adapters.onebot.v11 import Message
 from nonebot.adapters import Bot, Event
 from nonebot.typing import T_State
+from nonebot.plugin import PluginMetadata
+from .config import Config
+
+
 import aiohttp
+
+__plugin_meta__ = PluginMetadata(
+    name="{nonebot-weather}",
+    description="{插件介绍}",
+    usage="{查询天气}",
+    type="{application}",
+    homepage="{https://github.com/hriyel/nonebot-weather.git}",
+    supported_adapters={"~onebot.v11", "~telegram"},
+)
 
 wettr = on_command('天气', aliases={'wttr', 'weather', 'tianqi'})
 
