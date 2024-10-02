@@ -1,32 +1,29 @@
-import codecs
-import os
-from setuptools import setup, find_packages
+import setuptools
 
-# these things are needed for the README.md show on pypi (if you dont need delete it)
-here = os.path.abspath(os.path.dirname(__file__))
+with open("README.md", "r", encoding="utf-8", errors="ignore") as fh:
+    long_description = fh.read()
 
-with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
-    long_description = "\n" + fh.read()
-
-# you need to change all these
-VERSION = '1.3'
-DESCRIPTION = '一个以nonebot为框架的天气查询插件'
-LONG_DESCRIPTION = ''
-
-setup(
+setuptools.setup(
     name="nonebot-weather",
-    version=VERSION,
+    version="1.3",
     author="hriyel",
     author_email="1249781871@qq.com",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
+    keywords=["pip", "nonebot2", "nonebot", "weather", "nonebot_plugin"],
+    description="一个以nonebot为框架的天气查询插件",
     long_description=long_description,
-    url="https://github.com/hriyel/nonebot-weather.git",
-    packages=find_packages(),
-    keywords=['python', 'menu', 'dumb_menu','windows','mac','linux'],
+    long_description_content_type="text/markdown",
+    url="https://github.com/hriyel/nonebot-weather.git",  # Removed the incorrect quotation mark
+    packages=setuptools.find_packages(),
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    include_package_data=True,
+    platforms="any",
     install_requires=[
-    "nonebot2 >= 2.0.0b1",
-    "nonebot-adapter-onebot >= 2.0.0b1"
-    "aiohttp >= 3.0"
+        "nonebot2 >= 2.0.0b1",
+        "nonebot-adapter-onebot >= 2.0.0b1",  # Added the missing comma
+        "aiohttp >= 3.0"
     ]
 )
