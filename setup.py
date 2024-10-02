@@ -9,7 +9,7 @@ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
 # you need to change all these
-VERSION = '1.2'
+VERSION = '1.3'
 DESCRIPTION = '一个以nonebot为框架的天气查询插件'
 LONG_DESCRIPTION = ''
 
@@ -23,14 +23,10 @@ setup(
     long_description=long_description,
     url="https://github.com/hriyel/nonebot-weather.git",
     packages=find_packages(),
-    install_requires=[],
     keywords=['python', 'menu', 'dumb_menu','windows','mac','linux'],
-    classifiers=[
-        "Development Status :: 1 - Planning",
-        "Intended Audience :: Developers",
-        "Programming Language :: Python :: 3",
-        "Operating System :: Unix",
-        "Operating System :: MacOS :: MacOS X",
-        "Operating System :: Microsoft :: Windows",
+    install_requires=[
+    "nonebot2 >= 2.0.0b1",
+    "nonebot-adapter-onebot >= 2.0.0b1"
+    "aiohttp >= 3.0"
     ]
 )
