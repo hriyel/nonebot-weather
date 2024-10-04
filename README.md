@@ -11,4 +11,4 @@
 ### 使用
 发送`「天气 城市」`即可查询城市当天与未来三天天气
 ## 致谢
-感谢来自https://github.com/zjkwdy/nonebot_plugin_weather_lite的灵感。
+感谢来自https://github.com/zjkwdy/nonebot_plugin_weather_lite 的灵感。
